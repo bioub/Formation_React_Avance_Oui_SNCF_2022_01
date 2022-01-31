@@ -1,0 +1,25 @@
+
+@mixin roundedTopCorner($radius: 3px) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin roundedBottomCorner($radius: 3px) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+.host {
+  user-select: none;
+}
+
+.selected {
+  padding: 5px;
+  @include roundedTopCorner(5px);
+  border: 1px solid black;
+}
+
+.menu {
+  @include roundedBottomCorner(5px);
+  border: 1px solid black;
+}
